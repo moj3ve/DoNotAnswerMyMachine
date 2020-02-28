@@ -1,0 +1,9 @@
+Package: jp.soh.donotanswermymachine
+Name: DoNotAnswerMyMachine
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Make AnsweringMachine XS ignore the call from third party apps
+Maintainer: Soh Satoh
+Author: Soh Satoh
+Section: Tweaks
