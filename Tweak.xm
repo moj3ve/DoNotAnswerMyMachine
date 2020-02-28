@@ -101,9 +101,14 @@
 -(NSArray *)currentCalls;
 @end
 
+@interface TUCallProvider
+-(NSString *)bundleIdentifier;
+@end
+
 @interface TUProxyCall: NSObject
 -(NSString *)audioCategory;
 -(NSString *)callerNameFromNetwork;
+-(TUCallProvider *)backingProvider;
 @end
 
 
@@ -112,9 +117,10 @@
 -(void)autoAnswerCall {
 	NSArray *currentCalls = [[NSClassFromString(@"TUCallCenter") sharedInstance] currentCalls];
 	TUProxyCall *currentCall = [currentCalls lastObject];
-	NSString *callInfo = [currentCall valueForKey:@"description"];
+	NSString *callingApp = [[currentCall backingProvider] bundleIdentifier];
+	HBLogDebug(@"app name: %@", callingApp);
 
-	if(![callInfo containsString:@"p=com.apple.coretelephony"]) {
+	if(![callingApp isEqualToString:@"com.apple.coretelephony"]) {
 		HBLogDebug(@"application is third party... Do nothing");
 		return;
 	}
