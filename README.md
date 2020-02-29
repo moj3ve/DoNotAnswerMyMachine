@@ -13,7 +13,8 @@ Build with Theos
 
 ## Licence
 
-MIT License
+MIT License  
+However, I don't permit selling this.  
 
 ## Author
 
