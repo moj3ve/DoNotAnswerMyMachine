@@ -1,8 +1,6 @@
 DoNotAnswerMyMachine
 ====
 
-Overview
-
 ## Description
 A small tweak to make AnsweringMachine XS ignore the call from third party apps.
 AnsweringMachine XS does not have the feature to disable on certain apps.
@@ -18,4 +16,4 @@ However, I don't permit selling this.
 
 ## Author
 
-[Soh](https://github.com/sohsatoh)
+[Soh Satoh](https://github.com/sohsatoh)
